@@ -3,7 +3,7 @@ import { MySidebar } from "../components";
 
 export function Layout() {
   return (
-    <main className="flex h-screen">
+    <main className="flex flex-col md:flex-row h-screen">
       <div className="ml-4 mt-4">
         <MySidebar />
       </div>
