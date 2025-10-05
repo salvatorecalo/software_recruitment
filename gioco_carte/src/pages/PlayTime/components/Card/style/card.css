@@ -1,6 +1,6 @@
 .card {
-    height: 200px;
-    width: 150px;
+    aspect-ratio: 3 / 4;
+    width: 100%;
     border: 1px solid #000000;
     display: flex;
     justify-content: space-evenly;
@@ -8,6 +8,7 @@
     gap: 1em;
     flex-direction: column;
     position: relative;
+    max-width: 200px;
 }
 
 .card .card-icon {

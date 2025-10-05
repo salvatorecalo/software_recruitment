@@ -1,7 +1,7 @@
-import { Card } from "./components";
+import { CardGroup } from "./components";
 
 export function PlayTime() {
     return (
-        <Card value={10} shown={true} type="hearts" number={10} />
+        <CardGroup />
     );
 }
