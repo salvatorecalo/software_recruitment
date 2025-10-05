@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
+import { PlayTime } from "./pages";
 
 export const routes = createBrowserRouter([
   {
@@ -8,7 +9,7 @@ export const routes = createBrowserRouter([
   },
   {
     path: "/play",
-    element: <div>Play page</div>,
+    element: <PlayTime />,
   },
   {
     path: "/results",

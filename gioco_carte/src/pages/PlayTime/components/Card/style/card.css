@@ -1,0 +1,25 @@
+.card {
+    height: 200px;
+    width: 150px;
+    border: 1px solid #000000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+    flex-direction: column;
+    position: relative;
+}
+
+.card .card-icon {
+    position: absolute;
+}
+
+.card .card-icon:nth-child(1) {
+    top: 10px;
+    left: 10px;
+}
+
+.card .card-icon:not(:nth-child(1)) {
+    bottom: 10px;
+    right: 10px;
+}
