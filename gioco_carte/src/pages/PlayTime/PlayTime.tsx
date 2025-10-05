@@ -1,7 +1,11 @@
-import { CardGroup } from "./components";
+import { CardGroup, Deck } from "./components";
 
 export function PlayTime() {
     return (
-        <CardGroup />
+        <>
+            <CardGroup />
+            <Deck />
+            <CardGroup />
+        </> 
     );
 }

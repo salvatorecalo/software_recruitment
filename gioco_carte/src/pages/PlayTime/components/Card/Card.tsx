@@ -28,6 +28,6 @@ export function Card({value, number, type, shown}: CardInterface) {
                 {_getIcon()}
             </article>
         :
-            <div style={{backgroundColor: "blue", height: "300px", width: "300px"}}></div>
+            <div style={{backgroundColor: "lightBlue"}} className="card"></div>
     );
 }
