@@ -1,7 +1,7 @@
-.cards-container {
-    width: 100%;
+.deck-card {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 2em;
 }
+

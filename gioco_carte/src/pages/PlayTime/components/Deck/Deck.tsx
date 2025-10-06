@@ -1,29 +1,31 @@
+import { useState } from "react";
+import { deckStore } from "../../../../stores/deckStore/deckStore";
 import { Card } from "../Card/Card";
 import type { CardInterface } from "../Card/interface/CardInterface";
+import './style/deck_card.css'
+import '../Card/style/card.css'
 
 export function Deck() {
-    function generateDeck() {
-        const types: string[] = ["hearts", "spades", "diamonds", "clubs"]
-        const deck: Array<CardInterface> = [];
+    const {extractCard} = deckStore();
+    const [lastExtractedCard, setLastExtractedCard] = useState<CardInterface | null>(null)
 
-        types.forEach(type => {
-            for (let i = 0; i <=13; i++){
-                deck.push({
-                    "type": type,
-                    "value": (i > 10 && ["diamonds", "clubs"].includes(type)) ? 0 : 10,
-                    "number": i
-                });
-            }
-        })
-        return deck;
+    function handleExtract() {
+    const card = extractCard();
+    if (card) {
+      setLastExtractedCard(card);
     }
-    function extractCard() {
-        
-    }
+  }
+
     return (
-        <>
-            <Card value={0} shown={false} number={0} type="" />
-            {extractCard()}
-        </>
+        <section className="deck-card">
+            <div onClick={handleExtract} className="card">
+                <Card value={0} shown={false} number={0} type="" />
+            </div>
+            {
+                lastExtractedCard && (
+                    <Card {...lastExtractedCard} shown={true} />
+                )
+            }
+        </section>
     );
 }

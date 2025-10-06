@@ -1,10 +1,14 @@
 import { useNavigate } from 'react-router';
 import './App.css'
+import { deckStore } from './stores/deckStore/deckStore';
 
 function App() {
   const navigator = useNavigate()
+  const {generateDeck} = deckStore()
   function _startGame() {
       navigator('play')
+      generateDeck()
+
   }
   return (
     <section className='main-content'>

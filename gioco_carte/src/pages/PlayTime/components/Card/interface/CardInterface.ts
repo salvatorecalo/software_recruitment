@@ -1,4 +1,3 @@
-
 export interface CardInterface {
     value: number,
     number: number,
